@@ -1,0 +1,16 @@
+package br.com.prova.service;
+
+import br.com.prova.model.Usuario;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
+
+public interface JwtService {
+
+	String gerarToken(Usuario usuario);
+	
+	Claims obterClaims(String token) throws ExpiredJwtException;
+	
+	boolean isTokenValido(String token);
+	
+	String obterLoginUsuario(String token);
+}
