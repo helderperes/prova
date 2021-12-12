@@ -34,5 +34,8 @@ public class Usuario {
 	
 	@Column(name = "SENHA", length = 255, nullable = false)
 	private String senha;
+	
+	@Column(name = "PERMISSOES", length = 50, nullable = false)
+	private String permissao;
 
 }
